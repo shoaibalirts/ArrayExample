@@ -1,4 +1,5 @@
 ﻿using System;
+using ClassLibrary1;
 
 namespace ArrayExample
 {
@@ -6,6 +7,22 @@ namespace ArrayExample
     {
         static void Main(string[] args)
         {
+
+            Employee[] employees = new Employee[] {
+                new Employee(){EmpID=101, EmpName="Scott" },
+                new Employee(){EmpID=102, EmpName="Smith" },
+                new Employee(){EmpID=103, EmpName="John" }
+            };
+
+            // To display all employees data
+            foreach (Employee employee in employees)
+            {
+                Console.WriteLine("Employee ID: " + employee.EmpID + ", Employee Name:" + employee.EmpName);
+            }
+            Console.WriteLine(employees[1].EmpName);
+
+
+            /*
             int[] a = new int[6] { 10, 20, 30, 40, 50, 30 };
             string[] b = new string[2] { "Shoaib", "Ali" };
             foreach (int i in a)
@@ -30,6 +47,7 @@ namespace ArrayExample
             {
                 Console.WriteLine(i);
             }
+            */
 
         }
     }
